@@ -15,3 +15,45 @@
 <ul>
     <li *ngFor="let item of myList">Item: {{ item }}</li>
 </ul>
+<button (click)="handleclick()">alert</button>
+<input type="text" [value]="dados.aluno.nome"
+    (input)="dados.aluno.nome = $event.target.value"
+>
+<input type="text" [value]="dados.aluno.nome"
+    (input)="dados.aluno.nome = name.value"
+    #name
+>
+
+<input type="text" 
+    [ngModel]="dados.aluno.nome"
+    (ngModelChange)="dados.aluno.nome = $event"
+>
+<input type="text" 
+    [(ngModel)]="dados.aluno.nome"
+>
+
+<select (change)="0" #myClass>
+    <option value="1">Class 1</option>
+    <option value="2">Class 2</option>
+    <option value="3">Class 3</option>
+    <option value="4">Class 4</option>
+</select>
+
+<div
+    [class.classe1]="myClass.value == 1"
+    [class.classe2]="myClass.value == 2"
+    [class.classe3]="myClass.value == 3"
+    [class.Maior1]="myClass.value > 1"
+    [style.background-color]="myClass.value > 1 ? '#000' : '#f00'"
+>
+div
+</div>
+
+<ul>
+    <li *ngFor="let student of students">Nome: {{ student.nome }}</li>
+</ul>
+<p>Faça uma pesquisa: (escreva: angular)</p>
+<input type="text" [(ngModel)]="searchText" (keyup)="getProjects()">
+<ul>
+    <li *ngFor="let project of projects">Projeto: {{ project.full_name }}</li>
+</ul>
