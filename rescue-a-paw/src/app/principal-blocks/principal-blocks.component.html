@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 block" *ngFor="let block of blocks; let i = index">    
+      <div class="text">
+        <h2>{{ block.title }}</h2>
+        <p>{{ block.content }}</p>
+      </div>
+      <img [src]="block.img" alt="{{ block.alt }}">
+    </div>
+  </div>
+</div>
