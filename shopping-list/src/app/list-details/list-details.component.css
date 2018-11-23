@@ -1,0 +1,19 @@
+table{
+    width: 90%;
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+th, td{
+    border:1px solid #ccc;
+    padding: 5px;
+}
+th{
+    padding: 15px;
+}
+a{
+    font-size: 26px;
+    padding: 10px;
+}
+.number{
+    text-align: right;
+}
